@@ -1,0 +1,32 @@
+Objects {} or []
+Arrays (a type of object)
+Functions ()
+
+Primitive Values = Numbers and Strings
+
+question - expression
+answer - value
+
+An expression is a question we want to ask JavaScript. An expression “expresses” a value and always result in a single value:
+
+console.log(2+2) 'evaluates to' 4
+
+The expression is 2+2 and the answer Is a value (4)
+
+To check a value’s type, we use typeof
+console.log(typeof(2)) \\ number
+console.log(typeof('hello')) \\ string
+
+Undefined - used for unintentionally missing values
+Null - used for intentionally missing values
+Booleans - used for logical operations
+Numbers - used for math calculations
+Strings - used for text
+
+RECAP
+
+- there are values, and then there's everything else. we can think of values as different things "floating" in our JavaScript universe. They don't exist inside our code, but we can refer to them from our code.
+- there are two categories of values: primitive and objects/functions.
+- some values are lonely. for example, null is the only value of the Null type and undefined is the only value of the undefined type
+- we can ask questions with expressions. JavaScript will answer with values.
+- we can use typeof to inspect the type of something
