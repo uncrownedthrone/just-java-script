@@ -1,0 +1,44 @@
+variables are not values
+variables point to values
+
+undefined is an unintentionally missing values
+
+a value has properties
+let mimsy = null
+console.log(mimsy.mood) \\ TypeError!
+^^^
+this is trying to access the property of mood on mimsy
+
+let isSad = true
+let isHappy = !isSad \\ opposite of isSad
+let isFeeling = isSad || isHappy \\ is at least one of them true?
+let isConfusing = isSad && isHappy \\ are both true?
+
+|| one true
+&& both true
+
+numbers have limited precison
+console.log(0.1 + 0.2 === 0.3) \\ false
+console.log(0.1 + 0.2 === 0.300000000004) \\ true
+
+floating point math
+as we move from 0 in either direction, we start losing precision. at some point, even two closest representatble numbers stay further apart than by 1
+
+special numbers
+let scale = 0
+let a = 1 / scale   \\ Infinity
+let b = 0 / scale   \\ NaN
+let c = -a          \\ Infinity
+let d = 1 / c       \\ -0
+
+NaN is actually a number and has a numeric value but it happens to be called 'not a number' because it represents an invalid result
+
+RECAP
+
+- Undefined - 1 Value: undefined
+- Null - 1 Value: null
+- Boolean - 2 Values: True and False
+- NUmbers - 1 Value for each floating point math number
+- JavaScript numbers follow the rules of floating point math. Their decimal part offers more precision closer to 0, and less precision further from it. We can say that their decimal point is 'floating'
+- Numbers resulting from invalid math operations are NaN
+- NaN is a numeric value

@@ -28,9 +28,11 @@ primitve values are like stars. always there and can be referred to in code, but
 
 variables are not values
 variables point to values
+
 variables are not values
 variables point to values
-varibales are not values
+
+variables are not values
 variables point to values
 
 a variable is like a wire. it starts with the name of the variable and ends pointing to some value
