@@ -1,0 +1,55 @@
+Objects {}
+
+these include
+- arrays
+- dates
+- RegExps
+- Other non-primitive values
+
+console.log(typeof({})); // "object"
+console.log(typeof([])); // "object"
+console.log(typeof(new Date())); // "object"
+console.log(typeof(/\d+/)); // "object"
+console.log(typeof(Math)); // "object"
+
+objects are mutable! we can access their properties with . or []
+
+let rapper = {name: 'Malicious'}
+rapper.name = 'Malice' // dot notation
+raper['name'] = 'No Malice' \\ bracket notation
+
+we can't make strings or numbers. we summon that value when we assign variables
+
+variables are not values
+variables point to values
+
+object literal {}
+everytime we use {}, we create a brand new object value/a value that never existed
+
+let shrek = {}
+let donkey = {}
+
+for (let i = 0; i < 7; i++) {
+  let dig = function() {
+    // Do nothing
+  }
+  console.log(dig)
+}
+
+this only contains ONE(1) function definition but SEVEN(7) function values
+
+function() - the function definition
+i < 7; i++ - seven function values created
+
+RECAP
+
+- Undefined - 1 Value, Undefined
+- Null - 1 Value, Null
+- Booleans - 2 Values, True and False
+- Numbers - One value for each floating point math numbers
+- BigInts - One value for every conceivable integer
+- Strings - One value for every conceivable string
+
+- Objects - 1 value for every object literal we execute {}
+- Funciton - 1 Value for every function definition we execute ()
+
