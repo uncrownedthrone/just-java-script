@@ -1,0 +1,42 @@
+primitive values can never change
+"yikes" cannot become "likes"
+
+example of array verus string
+
+let arr = [212, 8, 506]
+let str = 'hello'
+
+you can access the items inside the array the same way you would access the first letter in the string. in that way, they seem similar.
+
+console.log(arr[0]) \\ this would give you 212 (first index)
+console.log(str[0]) \\ this gives you 'h' from 'hello'
+
+i can even change the item inside of the array:
+
+arr[0] = 420
+console.log(arr) \\ evaluates to [420, 8, 506]
+
+can't do that with a STRING!
+becuase it's immutable
+
+let fifty = 50
+fifty.shades = 'gray' \\ NO!
+
+like any number, 50 is a primitive, immutable value and you can't set properties on it
+
+primitve values are like stars. always there and can be referred to in code, but i can't change them.
+
+variables are not values
+variables point to values
+variables are not values
+variables point to values
+varibales are not values
+variables point to values
+
+a variable is like a wire. it starts with the name of the variable and ends pointing to some value
+
+RECAP
+
+- primitive values are immutable. strings are primitive. arrays are not. booleans are primitive.
+- variables are not values. they only point to a value. we can change what value they point at by using = (assignment)
+- look out for contradictions
