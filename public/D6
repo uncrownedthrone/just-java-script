@@ -1,0 +1,61 @@
+Data Equality
+
+if you don't have a clear model of equality in javascript, every day is like a carnival. you're never sure if you're dealing with the same value or two different values
+
+three different types of equality
+
+strict === triple equals (same value and type)
+loose == double equals (same value, not type)
+same value Object.is(a, b)
+
+Object.is(a, b) - same value equality
+
+Object.is(a, b) this tells us if a and b are the same value
+
+let dwarves = 7;
+let continents = '7';
+let worldWonders = 3 + 4;
+
+dwarves points to = integer 7
+worldWonders points to = integer 7
+continents points to = string 7
+
+console.log(Object.is(dwarves, continents)); // false
+integer 7 | string 7
+console.log(Object.is(continents, worldWonders)); // false
+string 7 | integer 7
+console.log(Object.is(worldWonders, dwarves)); // true
+integer 7 | integer 7
+
+if two values are represented by a single shape on our diagram, it means they aren't really two different values. they are the same one value. that is when Object.is(a, b) returns true
+
+Object.is - Objects
+
+let banana = {};
+  - declare a banana variable
+  - create a new object value
+  - point banana to new object value
+let cherry = banana;
+  - declare a cherry variable
+  - point cherry to where banana is pointing (object value)
+let chocolate = cherry;
+  - declare a chocolate variable
+  - point chocolate to where cherry is pointing (object value)
+cherry = {};
+  - create a new object value and point cherry at it
+
+{} always means to "create a new object value"
+
+console.log(Object.is(banana, cherry)); // false
+  banana points at one object value and cherry points at another
+console.log(Object.is(cherry, chocolate)); // false
+  cherry is pointed at one object value and chocolate points to another
+console.log(Object.is(chocolate, banana)); // true
+  chocolate and banana are pointing at the same object value
+
+a === b is an expression that always returns a boolean: T or false
+
+Strict Equality === Exceptions
+
+NaN === NaN evaluates to false even though they are the same value
+-0 === 0 and 0 === -0 evaluates to true even though they are the same value
