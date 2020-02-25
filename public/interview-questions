@@ -1,0 +1,97 @@
+Difference between var and let
+
+var is function-scoped
+let/const is block-scoped
+
+in this example, both a and b are available for the function but not outside
+
+function doStuff() {
+  let a = 5;
+  var b = 5;
+
+  console.log(a + b); // 10
+}
+
+doStuff(); // 10
+console.log(a); // ReferenceError
+console.let(b); // ReferenceError
+
+
+function doMoreStuff() {
+  if (2 + 2 === 4) {
+    // Here, a will be available for the whole function
+    var a = 5;
+    // But b will be available only inside this if block
+    var b = 5;
+  }
+  console.log(a); // 5
+  console.let(b); // ReferenceError
+}
+
+doMoreStuff();
+// 5
+// ReferenceError
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+
+Since we used let, i is recreated on every iteration
+setTimeout gets a new i every time
+
+0, 1, 2, 3, 4
+
+for (var j = 0; j < 5; j++) {
+  setTimeout(() => console.log(j), 100);
+}
+Since we used var, j is scoped outside of the function (it's in the file itself)
+setTimeout gets the same reference to j each time
+
+5, 5, 5, 5, 5
+
+Difference between == and ===
+
+== allows type cohersion
+=== does not allow type cohersion
+
+Here, '5' will be converted to 5
+5 == '5'; // true
+5 === '5'; // false
+
+Here, true will be converted to 1
+1 == true; // true
+1 > false; // true
+0 === false; // false
+
+Here, JS will try to convert both of these to number
+// Number('true') = NaN, but Number(true) = 1
+'true' == true; // false
+'true' === 'true; // false
+
+
+NaN === NaN // false
+just because one value is not a number and another one is not a number, doesn't mean they are equal
+
+=== value AND type
+
+0.1 + 0.2 === 0.3 // false
+this has to do with floating point operations in any programming languages
+the actual value of this is 0.3000001 so to check for equality, you would use:
+  Math.abs(0.3 - (0.2 + 0.1)) <= EPS
+where EPS is an arbitrary small value (0.00001, for example)
+
+Primitive Data Types in JS
+
+boolean
+null
+integer
+string
+NaN
+undefined
+Symbol
+BigInt
+
+Strict mode
+x = 'abacaba'; // using an undeclared variable is not allowed
+delete x; // deleting variables is not allowed
+function (x1, x1) {} // duplicating argument names is not allowed
